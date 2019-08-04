@@ -1,6 +1,9 @@
 {
   "name": "boilerplate",
   "version": "1.0.0",
+  "engines": {
+    "node": "11.13.0"
+  },
   "main": "index.js",
   "author": "yoel_gottlieb",
   "license": "MIT",
