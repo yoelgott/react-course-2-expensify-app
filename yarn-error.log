@@ -1,0 +1,88 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\yoelg\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add build:prod
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\yoelg\AppData\Local\Microsoft\WindowsApps;;C:\Users\yoelg\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\yoelg\AppData\Roaming\npm;C:\Program Files\heroku\bin
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  11.13.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: build:prod: Invalid protocol: build:
+      at Request.module.exports.Request.init (C:\Users\yoelg\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:129859:31)
+      at new Request (C:\Users\yoelg\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:129532:8)
+      at request (C:\Users\yoelg\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:126438:10)
+      at RequestManager.execute (C:\Users\yoelg\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66143:15)
+      at RequestManager.shiftQueue (C:\Users\yoelg\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66181:10)
+      at C:\Users\yoelg\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:65860:13
+      at new Promise (<anonymous>)
+      at new F (C:\Users\yoelg\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:5228:28)
+      at RequestManager.request (C:\Users\yoelg\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:65858:19)
+      at NpmRegistry.<anonymous> (C:\Users\yoelg\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:31614:42)
+
+npm manifest: 
+  {
+    "name": "boilerplate",
+    "version": "1.0.0",
+    "engines": {
+      "node": "11.13.0",
+      "npm": "6.7.0"
+    },
+    "main": "index.js",
+    "author": "yoel_gottlieb",
+    "license": "MIT",
+    "scripts": {
+      "start": "node server/server.js",
+      "heroku-postbuild": "yarn run build:prod",
+      "serve": "live-server public/",
+      "build:dev": "webpack",
+      "build:prod": "webpack -p --env production",
+      "dev-server": "webpack-dev-server",
+      "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
+    },
+    "dependencies": {
+      "babel-cli": "^6.26.0",
+      "babel-core": "^6.26.3",
+      "babel-loader": "7",
+      "babel-plugin-transform-class-properties": "^6.24.1",
+      "babel-plugin-transform-object-rest-spread": "^6.26.0",
+      "babel-preset-env": "^1.7.0",
+      "babel-preset-react": "^6.24.1",
+      "css-loader": "^3.1.0",
+      "express": "^4.17.1",
+      "extract-text-webpack-plugin": "^3.0.2",
+      "live-server": "^1.2.1",
+      "moment": "^2.24.0",
+      "node-sass": "^4.12.0",
+      "normalize.css": "^8.0.1",
+      "react": "^16.8.6",
+      "react-addons-shallow-compare": "^15.6.2",
+      "react-dates": "^20.2.5",
+      "react-dom": "^16.8.6",
+      "react-modal": "^3.9.1",
+      "react-redux": "^7.1.0",
+      "react-router-dom": "^5.0.1",
+      "redux": "^4.0.4",
+      "sass-loader": "^7.1.0",
+      "style-loader": "^0.23.1",
+      "uuid": "^3.3.2",
+      "validator": "^11.1.0",
+      "webpack": "^4.35.3",
+      "webpack-dev-server": "^3.7.2"
+    },
+    "devDependencies": {
+      "webpack-cli": "^3.3.6"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
